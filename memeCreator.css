@@ -1,14 +1,14 @@
 body{
+    background-color: rgb(3, 217, 255);
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .structureContainter{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 /* HEADER-TITLE-AND IMG-TEXT AND DARK MODE BUTTONS */
@@ -106,7 +106,7 @@ main{
     border-radius: 5px;
     border-style: none;
     padding: 0.5vh;
-    background-color: #5ccda7;
+    background-color: #0b622f;
     color: white;
 }
 .asideImage p, .asideText p{
@@ -118,11 +118,11 @@ main{
     justify-content: space-between;
 }
 .divColorAndBackgroundColor input{
-    background-color: #5ccda7;
+    background-color: #0b622f;
     width: 42%;
 }
 .divColorAndBackgroundColor select{
-    background-color: #5ccda7;
+    background-color: #0b622f;
     color: white;
     width: 42%;
     border-radius: 5px;
@@ -140,7 +140,7 @@ main{
 
 
 /* HOVER Y FOCUS PART */
-.color:focus, .backgroundColor:focus, .asideImage input:hover, #inputTopText:hover, #inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover{
+.color:focus, .backgroundColor:focus, .asideImage input:hover, #inputTopText:hover, #inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover, .divColorAndBackgroundColor select:hover{
     background-color: #0e783a;
 }
 .asideImage input:focus{
@@ -196,6 +196,9 @@ main{
     padding: 1.5vh;
     color: white;
     font-size: 15px;
+}
+.asideImage button{
+    padding: 0;
 }
 
 .divTextAndBackgroundColor{
