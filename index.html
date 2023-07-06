@@ -77,14 +77,14 @@
             <h3>TEXT</h3>
             <div class="divTopTextBox">
                 <p>TOP TEXT</p>
-                <input type="text"><br>
-                <input type="checkbox" id="checkWithoutTopText"> 
-                <label for="checkWithoutTopText" class="labelCheckBoxTexts"> top text</label>
+                <input type="text" id="inputTopText"><br>
+                <input type="checkbox" id="checkWithoutTopText">
+                <label for="checkWithoutTopText" class="labelCheckBoxTexts"> without top text</label>
             </div>
             <div class="divBottomTextBox">
                 <p>BOTTOM TEXT</p>
-                <input type="text"><br>
-                <input type="checkbox" id="checkWithoutBottomText"> 
+                <input type="text" id="inputBottomText"><br>
+                <input type="checkbox" id="checkWithoutBottomText">
                 <label for="checkWithoutBottomText" class="labelCheckBoxTexts">without bottom text</label>
             </div>
             <div class="divFontFamilySelect">
@@ -104,11 +104,15 @@
             <div class="divTextAndBackgroundColor">
                 <div class="divColorText">
                     <p>COLOR</p>
-                    <input type="color"><span>o</span>
+                    <div class="color">
+                        <input type="color"><span>o</span>
+                    </div>
                 </div>
                 <div class="divBackgroundColor">
                     <p>BACKGROUND</p>
-                    <input type="color"><span>o</span>
+                    <div class="backgroundColor">
+                        <input type="color"><span>o</span>
+                    </div>
                 </div>
             </div>
             <div class="checkWithClearBackground">

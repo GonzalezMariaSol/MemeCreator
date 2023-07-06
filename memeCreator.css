@@ -13,7 +13,7 @@ body{
 
 /* HEADER-TITLE-AND IMG-TEXT AND DARK MODE BUTTONS */
 header{
-    background-color: #412b5f;
+    background-color: #003817;
     width: 100%;
     height: 20vh;
     text-align: center;
@@ -39,7 +39,7 @@ h1{
 
 /* MAIN CONTAINER IMG MEME-TOP AND BOTTOM TEXT */
 main{
-    background-color: #572975;
+    background-color: #045b28;
 
             /* ALTURA NO RESPONSIVA */
     height:80vh;
@@ -71,10 +71,15 @@ main{
     height:60vh;
 }
 .downloadPictureButton{
-    background-color: #63c570;
+    background-color: #193e28;
+    color: white;
     margin-bottom: 2vh;
-    margin-left: 45%;
+    margin-left: 46%;
     margin-top: 2.5vh;
+    border-radius: 5px;
+    border-style: none;
+    padding: 1vh;
+    font-weight: bold;
 }
 
 /* ----------------------------------------------------------------------- */
@@ -82,7 +87,7 @@ main{
 /* ASIDE IMAGEN  */
 
 .asideImage, .asideText{
-    background-color: forestgreen;
+    background-color: #074822;
     position: absolute;
     left: 76%;
     overflow-y: scroll;
@@ -90,41 +95,35 @@ main{
     display: flex;
     flex-direction: column;
     padding: 2vh;
-    width: max-content;
+    width: 40vh;
 }
 .asideImage h3, .asideText h3{
-    background-color: #56617e;
     font-size: 4vh;
     text-align: center;
 }
-.divUrl{
-    background-color: rgb(77, 20, 220);
-}
 .asideImage input {
     width: 97%;
-    background-color: yellow;
     border-radius: 5px;
     border-style: none;
     padding: 0.5vh;
+    background-color: #5ccda7;
+    color: white;
 }
 .asideImage p, .asideText p{
     margin-bottom: 0.5vh;
 }
-.divBackground{
-    background-color: aquamarine;
-}
 .divColorAndBackgroundColor{
-    background-color: cadetblue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .divColorAndBackgroundColor input{
-    background-color: coral;
+    background-color: #5ccda7;
     width: 42%;
 }
 .divColorAndBackgroundColor select{
-    background-color:darkgoldenrod;
+    background-color: #5ccda7;
+    color: white;
     width: 42%;
     border-radius: 5px;
     border-style: none;
@@ -133,15 +132,20 @@ main{
     padding: 2vh;
     padding-left: 0;
 }
-.asideImage button{
-    background-color: rebeccapurple;
-    width: max-content;
-    align-self: center;
-    margin: 2vh;
-}
+
 
 /* FIN DE ESTILAMIENTO DEL ASIDE IMG */
 
+
+
+
+/* HOVER Y FOCUS PART */
+.color:focus, .backgroundColor:focus, .asideImage input:hover, #inputTopText:hover, #inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover{
+    background-color: #0e783a;
+}
+.asideImage input:focus{
+    outline: none ;
+}
 
 
 
@@ -150,12 +154,21 @@ main{
 /* ESTILAMIENTO DE ASIDE TEXT */
 
 
+#inputTopText, #inputBottomText{
+    background-color: #0b622f;
+    color: white;
+    width: 95%;
+    border-style: none;
+    border-radius: 5px;
+    padding: 1vh;
+}
 
 #checkWithoutTopText, #checkWithoutBottomText, .labelCheckBoxTexts, .checkWithClearBackground{
     margin-top: 1vh;
 }
 .divFontFamilySelect select{
-    background-color: aquamarine;
+    background-color: #0b622f;
+    color: white;
     border-radius: 5px;
     border-style: none;
     padding: 1vh;
@@ -163,40 +176,51 @@ main{
     width: 100%;
 }
 .divButtonTextAlignAndSize{
-    background-color: rgb(236, 183, 183);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .divButtonTextAlignAndSize input{
+    background-color: #0b622f;
+    color: white;
     width: 50%;
     border-radius: 5px;
     border-style: none;
     padding: 1vh;
 }
+
 .divButtonTextAlignAndSize button, .outlineOptions button, .asideImage button, .buttonContainer button{
+    background-color: #0b622f;
     border-radius: 5px;
     border-style: none;
     padding: 1.5vh;
-    background-color: transparent;
     color: white;
     font-size: 15px;
 }
 
 .divTextAndBackgroundColor{
-    background-color: brown;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+.color, .backgroundColor{
+    background-color: #0b622f;
+    border-radius: 5px;
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    width:max-content;
+}
 .outlineOptions{
-    background-color: darkgrey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .divTextBoxMargin input, .divTextBoxLeading input{
     width: 100%;
+    background-color: #0b622f;
+    border-radius: 5px;
+    border-style: none;
 }
 
 /* FIN DE ESTILAMIENTO ASIDE TEXT */
