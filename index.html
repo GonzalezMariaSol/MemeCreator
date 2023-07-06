@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="memeCreator.css">
+    <title>3er intento editor de memes</title>
+</head>
+
+<body>
+    <div class="structureContainter">
+        <header>
+            <h1>Meme Creator</h1>
+            <div class="buttonContainer">
+                <button id="imageButton"><i class="fa-regular fa-image"></i> Image</button>
+                <button id="textButton"><i class="fa-solid fa-font"></i> Text</button>
+                <button id="ligthDarkMode"><i class="fa-regular fa-lightbulb"></i> Ligth Mode</button>
+            </div>
+        </header>
+        <main>
+            <div class="main-container" id="mainContainer">
+                <h2 class="text top">top</h2>
+                <div class="memeContainer"></div>
+                <h2 class="text bottom">bottom</h2>
+            </div>
+            <button class="downloadPictureButton">Download picture</button>
+        </main>
+        <!-- <aside class="asideImage" id="asideImg">
+            <h3>IMAGE</h3>
+            <div class="divUrl">
+                <p>URL</p>
+                <input type="inputUrl">
+            </div>
+            <div class="divBackground">
+                <p>BACKGROUND</p>
+                <div class="divColorAndBackgroundColor">
+                    <input type="inputColor"><select class="selectColorBackgroundEfect">
+                        <option selected disabled>None</option>
+                        <option>b</option>
+                    </select>
+                </div>
+            </div>
+            <div class="divPictureEffect">
+                <p>FILTERS</p>
+                <label for="brigthInput">BRIGHTNESS</label><br>
+                <input type="range" id="brigthInput" min="0" max="1" value="1" step="0.1"><br>
+                <label for="opacityInput">OPACITY</label><br>
+                <input type="range" id="opacityInput" min="0" max="1" value="1" step="0.1"><br>
+                <label for="contrastInput">CONTRAST</label><br>
+                <input type="range" id="contrastInput" min="100" max="1000" value="100" step="1"><br>
+                <label for="blurInput">BLUR</label><br>
+                <input type="range" id="blurInput" min="0" max="10" value="0" step="0.1"><br>
+                <label for="sepiaInput">SEPIA</label><br>
+                <input type="range" id="sepiaInput" min="0" max="100" value="0" step="1"><br>
+                <label for="hueInput">HUE</label><br>
+                <input type="range" id="hueInput" min="" max="" value="" step=""><br>
+                <label for="saturationInput">SATURATION</label><br>
+                <input type="range" id="saturationInput" min="" max="" value="" step=""><br>
+                <label for="negativeInput">NEGATIVE</label><br>
+                <input type="range" id="negativeInput" min="" max="" value="" step=""><br>
+            </div>
+            <button><input type="reset" id="resetButtonImg"></button>
+        </aside> -->
+        <aside class="asideText" id="asideText">
+            <h3>TEXT</h3>
+            <div class="divTopTextBox">
+                <p>TOP TEXT</p>
+                <input type="text"><br>
+                <input type="checkbox" id="checkWithoutTopText"> 
+                <label for="checkWithoutTopText" class="labelCheckBoxTexts"> top text</label>
+            </div>
+            <div class="divBottomTextBox">
+                <p>BOTTOM TEXT</p>
+                <input type="text"><br>
+                <input type="checkbox" id="checkWithoutBottomText"> 
+                <label for="checkWithoutBottomText" class="labelCheckBoxTexts">without bottom text</label>
+            </div>
+            <div class="divFontFamilySelect">
+                <p>FONT</p>
+                <select class="selectOptionsFontFamily">
+                    <option selected disabled>choose a type of font</option>
+                    <option>a</option>
+                    <option>b</option>
+                </select>
+                <div class="divButtonTextAlignAndSize">
+                    <input type="number">
+                    <button><i class="fa-solid fa-align-left"></i></button>
+                    <button><i class="fa-solid fa-align-justify"></i></button>
+                    <button><i class="fa-solid fa-align-right"></i></button>
+                </div>
+            </div>
+            <div class="divTextAndBackgroundColor">
+                <div class="divColorText">
+                    <p>COLOR</p>
+                    <input type="color"><span>o</span>
+                </div>
+                <div class="divBackgroundColor">
+                    <p>BACKGROUND</p>
+                    <input type="color"><span>o</span>
+                </div>
+            </div>
+            <div class="checkWithClearBackground">
+                <input type="checkbox">clear background
+            </div>
+            <div class="divOutlineText">
+                <p>OUTLINE</p>
+                <div class="outlineOptions">
+                    <button>None</button>
+                    <button>Ligth</button>
+                    <button>Dark</button>
+                </div>
+            </div>
+            <div class="divTextBoxMargin">
+                <p>MARGIN</p>
+                <input type="number">
+            </div>
+            <div class="divTextBoxLeading">
+                <p>LEADING</p>
+                <input type="number">
+            </div>
+        </aside>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>

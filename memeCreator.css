@@ -1,0 +1,300 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    color: white;
+}
+.structureContainter{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HEADER-TITLE-AND IMG-TEXT AND DARK MODE BUTTONS */
+header{
+    background-color: #412b5f;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+}
+h1{
+    font-size:8vh;
+    margin-top:1.5vh;
+}
+.buttonContainer{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: -4vh;
+    display: flex;
+    justify-content: space-around;
+}
+.buttonContainer button:hover{
+    background-color: #664891;
+}
+
+/* -----------------------------------------------------------------*/
+
+
+
+/* MAIN CONTAINER IMG MEME-TOP AND BOTTOM TEXT */
+main{
+    background-color: #572975;
+
+            /* ALTURA NO RESPONSIVA */
+    height:80vh;
+}
+.main-container{
+    background-color: red;
+    height: 90%;
+    width: 45%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.text{
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+.top{
+    margin-top: 0;
+}
+.bottom{
+
+    /* NO LLEGA DEL TODO A ABAJO PARA RESPONSIVO*/
+    bottom: 0;
+}
+.memeContainer{
+    background-color: black;
+    height:60vh;
+}
+.downloadPictureButton{
+    background-color: #63c570;
+    margin-bottom: 2vh;
+    margin-left: 45%;
+    margin-top: 2.5vh;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* ASIDE IMAGEN  */
+
+.asideImage, .asideText{
+    background-color: forestgreen;
+    position: absolute;
+    left: 76%;
+    overflow-y: scroll;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    width: max-content;
+}
+.asideImage h3, .asideText h3{
+    background-color: #56617e;
+    font-size: 4vh;
+    text-align: center;
+}
+.divUrl{
+    background-color: rgb(77, 20, 220);
+}
+.asideImage input {
+    width: 97%;
+    background-color: yellow;
+    border-radius: 5px;
+    border-style: none;
+    padding: 0.5vh;
+}
+.asideImage p, .asideText p{
+    margin-bottom: 0.5vh;
+}
+.divBackground{
+    background-color: aquamarine;
+}
+.divColorAndBackgroundColor{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.divColorAndBackgroundColor input{
+    background-color: coral;
+    width: 42%;
+}
+.divColorAndBackgroundColor select{
+    background-color:darkgoldenrod;
+    width: 42%;
+    border-radius: 5px;
+    border-style: none;
+}
+.divPictureEffect p {
+    padding: 2vh;
+    padding-left: 0;
+}
+.asideImage button{
+    background-color: rebeccapurple;
+    width: max-content;
+    align-self: center;
+    margin: 2vh;
+}
+
+/* FIN DE ESTILAMIENTO DEL ASIDE IMG */
+
+
+
+
+
+
+/* ESTILAMIENTO DE ASIDE TEXT */
+
+
+
+#checkWithoutTopText, #checkWithoutBottomText, .labelCheckBoxTexts, .checkWithClearBackground{
+    margin-top: 1vh;
+}
+.divFontFamilySelect select{
+    background-color: aquamarine;
+    border-radius: 5px;
+    border-style: none;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+.divButtonTextAlignAndSize{
+    background-color: rgb(236, 183, 183);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.divButtonTextAlignAndSize input{
+    width: 50%;
+    border-radius: 5px;
+    border-style: none;
+    padding: 1vh;
+}
+.divButtonTextAlignAndSize button, .outlineOptions button, .asideImage button, .buttonContainer button{
+    border-radius: 5px;
+    border-style: none;
+    padding: 1.5vh;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+}
+
+.divTextAndBackgroundColor{
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.outlineOptions{
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.divTextBoxMargin input, .divTextBoxLeading input{
+    width: 100%;
+}
+
+/* FIN DE ESTILAMIENTO ASIDE TEXT */
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* JAVASCRIPT PART */
+/* ---------------------------------------------------------------------------- */
+
+
+/* ACCION ESCONDER */
+.hideContainer{
+    display: none;
+}
+
+
+
+/* MODO CLARO */
+.ligthModeBody{
+    color: #3f3f3f;
+    background-color: #eeeeee;
+}
+.ligthModeHeader{
+    background-color: #e0e0e0;
+}
+.ligthModeButtonContainer button:hover{
+    background-color: #cccccc;
+    border-style: none;
+    border-radius: 5px;
+}
+.ligthModeAsideImg{
+    background-color: white;
+}
+.ligthModeAsideText{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
