@@ -44,7 +44,7 @@ main{
             /* ALTURA NO RESPONSIVA */
     height:80vh;
 }
-.main-container{
+.mainContainer{
     background-color: red;
     height: 90%;
     width: 45%;
@@ -59,12 +59,13 @@ main{
     width: 100%;
 }
 .top{
-    margin-top: 0;
+    padding: 10px 0px;
+    margin: 0;
 }
 .bottom{
-
-    /* NO LLEGA DEL TODO A ABAJO PARA RESPONSIVO*/
-    bottom: 0;
+    padding: 10px 0px;
+    margin: 0;
+    /* NO RESPONSIVO*/
 }
 .memeContainer{
     background-color: black;
@@ -124,6 +125,7 @@ main{
 .divColorAndBackgroundColor select{
     background-color: #0b622f;
     color: white;
+    text-align: center;
     width: 42%;
     border-radius: 5px;
     border-style: none;
