@@ -30,7 +30,7 @@ h1{
     justify-content: space-around;
 }
 .buttonContainer button:hover{
-    background-color: #664891;
+    background-color: #6c3eab;
 }
 
 /* -----------------------------------------------------------------*/
@@ -72,7 +72,7 @@ main{
     height:60vh;
 }
 .downloadPictureButton{
-    background-color: #193e28;
+    background-color: #00ff66;
     color: white;
     margin-bottom: 2vh;
     margin-left: 46%;
@@ -142,7 +142,7 @@ main{
 
 
 /* HOVER Y FOCUS PART */
-.color:focus, .backgroundColor:focus, .asideImage input:hover, #inputTopText:hover, #inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover, .divColorAndBackgroundColor select:hover{
+.color:focus, .backgroundColor:focus, .asideImage input:hover, .inputTopText:hover, .inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover, .divColorAndBackgroundColor select:hover{
     background-color: #0e783a;
 }
 .asideImage input:focus{
@@ -156,7 +156,7 @@ main{
 /* ESTILAMIENTO DE ASIDE TEXT */
 
 
-#inputTopText, #inputBottomText{
+.inputTopText, .inputBottomText{
     background-color: #0b622f;
     color: white;
     width: 95%;
@@ -199,6 +199,7 @@ main{
     color: white;
     font-size: 15px;
 }
+
 .asideImage button{
     padding: 0;
 }
@@ -240,31 +241,48 @@ main{
 
 
 /* ACCION ESCONDER */
-.hideContainer{
+.hide{
     display: none;
 }
 
 
 
 /* MODO CLARO */
-.ligthModeBody{
-    color: #3f3f3f;
-    background-color: #eeeeee;
-}
+
 .ligthModeHeader{
-    background-color: #e0e0e0;
+    background-color: #efe44a;
+    color: rgb(52, 52, 52);
 }
-.ligthModeButtonContainer button:hover{
-    background-color: #cccccc;
+.ligthModeButtonHeader button{
+    background-color: #faec20;
+    color: rgb(52, 52, 52);
+}
+.ligthModeButtonHeader button:hover{
+    background-color: #b68fff;
     border-style: none;
     border-radius: 5px;
 }
-.ligthModeAsideImg{
-    background-color: white;
+.ligthMain{
+    background-color: #fff892;
 }
-.ligthModeAsideText{
-    background-color: white;
+.ligthDownloadPictureButton{
+    background-color: rgb(0, 255, 119);
+    color: rgb(52, 52, 52);
+    
 }
+.ligthModeAsideImg, .ligthModeAsideText {
+    background-color: #ebe00d;
+    color: rgb(52, 52, 52);
+}
+.ligthModeAsideImg button, .ligthModeAsideImg select, .ligthModeAsideText button, .ligthModeAsideImg input, .ligthModeAsideText input, .ligthModeAsideText span, .ligthModeAsideText select{
+    background-color: #fff200;
+    color: rgb(52, 52, 52);
+}
+.ligthModeAsideImg button:hover, .ligthModeAsideImg select:hover, .ligthModeAsideText button:hover, .ligthModeAsideImg input:hover, .ligthModeAsideText input:hover, .ligthModeAsideText span:hover, .ligthModeAsideText select:hover{
+    background-color: #fff98f;
+}
+
+
 
 
 

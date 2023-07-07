@@ -21,21 +21,21 @@
 
 <body>
     <div class="structureContainter">
-        <header>
+        <header id="headerContainer">
             <h1>Meme Creator</h1>
-            <div class="buttonContainer">
+            <div class="buttonContainer" id="buttonContainer">
                 <button id="imageButton"><i class="fa-regular fa-image"></i> Image</button>
                 <button id="textButton"><i class="fa-solid fa-font"></i> Text</button>
                 <button id="ligthDarkMode"><i class="fa-regular fa-lightbulb"></i> Ligth Mode</button>
             </div>
         </header>
-        <main>
+        <main id="mainContainer">
             <div class="mainContainer" id="mainContainer">
                 <h2 class="text top">top</h2>
                 <div class="memeContainer"></div>
                 <h2 class="text bottom">bottom</h2>
             </div>
-            <button class="downloadPictureButton">Download picture</button>
+            <button class="downloadPictureButton" id="downloadPicButton">Download picture</button>
         </main>
         <aside class="asideImage" id="asideImg">
             <h3>IMAGE</h3>
@@ -77,13 +77,13 @@
             <h3>TEXT</h3>
             <div class="divTopTextBox">
                 <p>TOP TEXT</p>
-                <input type="text" id="inputTopText"><br>
+                <input type="text" id="inputTopText" class="inputTopText"><br>
                 <input type="checkbox" id="checkWithoutTopText">
                 <label for="checkWithoutTopText" class="labelCheckBoxTexts"> without top text</label>
             </div>
             <div class="divBottomTextBox">
                 <p>BOTTOM TEXT</p>
-                <input type="text" id="inputBottomText"><br>
+                <input type="text" id="inputBottomText" class="inputBottomText"><br>
                 <input type="checkbox" id="checkWithoutBottomText">
                 <label for="checkWithoutBottomText" class="labelCheckBoxTexts">without bottom text</label>
             </div>
