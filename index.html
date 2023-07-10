@@ -26,14 +26,14 @@
             <div class="buttonContainer" id="buttonContainer">
                 <button id="imageButton"><i class="fa-regular fa-image"></i> Image</button>
                 <button id="textButton"><i class="fa-solid fa-font"></i> Text</button>
-                <button id="ligthDarkMode"><i class="fa-regular fa-lightbulb"></i> Ligth Mode</button>
+                <button id="ligthDarkMode"><i class="fa-regular fa-sun" style="color: #ffffff;"></i> Ligth Mode</button>
             </div>
         </header>
         <main id="mainContainer">
             <div class="mainContainer" id="mainContainer">
-                <h2 class="text top">top</h2>
-                <div class="memeContainer"></div>
-                <h2 class="text bottom">bottom</h2>
+                <div class="text top" id="topText">top</div>
+                <div class="memeContainer" id="memeContainer"></div>
+                <div class="text bottom" id="bottomText">bottom</div>
             </div>
             <button class="downloadPictureButton" id="downloadPicButton">Download picture</button>
         </main>
@@ -41,12 +41,12 @@
             <h3>IMAGE</h3>
             <div class="divUrl">
                 <p>URL</p>
-                <input type="inputUrl">
+                <input type="text " id="memeUrl">
             </div>
             <div class="divBackground">
                 <p>BACKGROUND</p>
                 <div class="divColorAndBackgroundColor">
-                    <input type="inputColor"><select class="selectColorBackgroundEfect">
+                    <input type="color"><select class="selectColorBackgroundEfect">
                         <option selected disabled>None</option>
                         <option>b</option>
                     </select>

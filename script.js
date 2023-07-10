@@ -6,6 +6,7 @@ const asideText = document.getElementById('asideText')
 
 
 buttonText.addEventListener('click', ()=>hideAsideText())
+
 const hideAsideText = ()=> {
     asideText.classList.remove('hide')
     asideImage.classList.add('hide')
@@ -27,43 +28,72 @@ const hideAsideImg = ()=> {
 
 
 const ligthModeButton = document.getElementById('ligthDarkMode')
-console.log(ligthModeButton)
-
 
 const ligthHeader = document.getElementById('headerContainer')
-console.log(ligthHeader)
-
 const ligthButtonContainer = document.getElementById('buttonContainer')
-console.log(ligthButtonContainer)
-
 const ligthMain = document.getElementById('mainContainer')
-console.log(ligthMain)
-
 const ligthDownloadButton = document.getElementById('downloadPicButton')
-
 const ligthAsideImg = document.getElementById('asideImg')
-console.log(ligthAsideImg)
-
 const ligthAsideText = document.getElementById('asideText')
-console.log(ligthAsideText)
 
 ligthModeButton.addEventListener('click',()=>ligthMode())
 
 const ligthMode = ()=>{
-    ligthHeader.classList.add('ligthModeHeader')
-    ligthButtonContainer.classList.add('ligthModeButtonHeader')
-    ligthMain.classList.add('ligthMain')
-    ligthAsideImg.classList.add('ligthModeAsideImg')
-    ligthAsideText.classList.add('ligthModeAsideText')
-    ligthDownloadButton.classList.add('ligthDownloadPictureButton')
+    ligthHeader.classList.toggle('ligthModeHeader')
+    ligthButtonContainer.classList.toggle('ligthModeButtonHeader')
+    ligthMain.classList.toggle('ligthMain')
+    ligthDownloadButton.classList.toggle('ligthDownloadPictureButton')
+    ligthAsideImg.classList.toggle('ligthModeAsideImg')
+    ligthAsideText.classList.toggle('ligthModeAsideText')
+    if (ligthHeader.classList.contains("ligthModeHeader")){
+        ligthModeButton.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+    }else{
+        ligthModeButton.innerHTML = '<i class="fa-regular fa-sun" style="color: #ffffff;"></i> Ligth Mode'
+    }
 }
 
 
+// ---------------------------------------------TOMAR TEXTOS DEL MEME---------------------------------------------------------------------------
+
+const firstTextBox = document.getElementById('topText')
+const secondTextBox = document.getElementById('bottomText')     // YO QUIERO PASAR A...
+
+const inputTopText = document.getElementById('inputTopText')
+const inputBottomText = document.getElementById('inputBottomText') // QUIERO ATRAPAR
 
 
 
+inputTopText.addEventListener('input', (event)=> changeTopText(event))
+
+const changeTopText = (e)=> {
+    valueTopText = e.target.value
+    firstTextBox.innerHTML = `${valueTopText}`
+}
+
+inputBottomText.addEventListener('input', (event)=> changeBottomText(event))
+
+const changeBottomText = (e)=> {
+    valueBottomText = e.target.value
+    secondTextBox.innerHTML = `${valueBottomText}`
+}
 
 
+// ---------------------------------------------TOMAR IMG DEL MEME---------------------------------------------------------------------------
+
+const userUrlMeme = document.getElementById('memeUrl') //LO QUE QUIERO TOMAR
+console.log(userUrlMeme)
+
+const containerMeme = document.getElementById('memeContainer') //A DONDE LO QUIERO PASAR
+console.log(containerMeme)
+
+userUrlMeme.addEventListener('input', (e)=> changesImgMemeContainer(e))
+ 
+const changesImgMemeContainer = (e)=> {
+    containerMeme.style.backgroundImage = `url('${e.target.value}')`
+    containerMeme.style.backgroundSize = 'cover'
+    containerMeme.style.backgroundRepeat = 'no-repeat'
+    containerMeme.style.backgroundPosition = 'center'
+}
 
 
 
