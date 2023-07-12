@@ -39,38 +39,38 @@ h1{
 
 /* MAIN CONTAINER IMG MEME-TOP AND BOTTOM TEXT */
 main{
-    background-color: #045b28;
-
-            /* ALTURA NO RESPONSIVA */
+    background-color: #185e35;
+    
+    /* ALTURA NO RESPONSIVA */
     height:80vh;
 }
-.mainContainer{
-    background-color: red;
-    height: 90%;
-    width: 45%;
+.memeContainer{
+    background-color: yellow;
+    height:70vh;
+    width: 50%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 .text{
-    background-color: white;
+    background-color: rgb(213, 213, 213);
     color: black;
     text-align: center;
-    width: 100%;
     min-height: 5vh;
 }
 .top{
     padding: 10px 0px;
     margin: 0;
 }
+.memeBox{
+    background-color: rgb(0, 0, 0);
+    height: 77%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .bottom{
     padding: 10px 0px;
     margin: 0;
     /* NO RESPONSIVO*/
-}
-.memeContainer{
-    background-color: black;
-    height:60vh;
 }
 .downloadPictureButton{
     background-color: #00ff66;
@@ -110,24 +110,36 @@ main{
     padding: 0.5vh;
     background-color: #0b622f;
     color: white;
+    
 }
 .asideImage p, .asideText p{
     margin-bottom: 0.5vh;
+    filter:grayscale();
 }
 .divColorAndBackgroundColor{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+.backgroundMeme{
+    background-color: #0b622f;
+    width: 60%;
+    border-radius: 5px;
+    border-style: none;
+}
 .divColorAndBackgroundColor input{
     background-color: #0b622f;
     width: 42%;
+}
+.backgroundMeme span{
+    background-color: blue;
+    width: fit-content;
 }
 .divColorAndBackgroundColor select{
     background-color: #0b622f;
     color: white;
     text-align: center;
-    width: 42%;
+    width: 38%;
     border-radius: 5px;
     border-style: none;
 }
@@ -226,6 +238,7 @@ main{
 .divTextBoxMargin input, .divTextBoxLeading input{
     width: 100%;
     background-color: #0b622f;
+    color: white;
     border-radius: 5px;
     border-style: none;
 }

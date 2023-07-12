@@ -5,6 +5,13 @@ const asideImage = document.getElementById('asideImg')
 const asideText = document.getElementById('asideText')
 
 
+buttonImage.addEventListener('click', ()=>hideAsideImg())
+const hideAsideImg = ()=> {
+    asideText.classList.add('hide')
+    asideImage.classList.remove('hide')
+}
+
+
 buttonText.addEventListener('click', ()=>hideAsideText())
 
 const hideAsideText = ()=> {
@@ -14,14 +21,10 @@ const hideAsideText = ()=> {
 
 
 // funciona pero NO TIENE SENTIDO EL ORDEN DE LAS ORDENES DENTRO DE LA FUNCION
+//NO SE PORQUE SE MUESTRA PRIMERO EL ASIDE TEXTO SI EL ASIDE IMG ES EL QUE ESTA DECLARADO EN TODAS PARTES PRIMERO
 
 
 
-buttonImage.addEventListener('click', ()=>hideAsideImg())
-const hideAsideImg = ()=> {
-    asideText.classList.add('hide')
-    asideImage.classList.remove('hide')
-}
 
 
 // -----------------------------------------------------MODO CLARO/OSCURO---------------------------------------------------------------------------
@@ -81,10 +84,7 @@ const changeBottomText = (e)=> {
 // ---------------------------------------------TOMAR IMG DEL MEME---------------------------------------------------------------------------
 
 const userUrlMeme = document.getElementById('memeUrl') //LO QUE QUIERO TOMAR
-console.log(userUrlMeme)
-
-const containerMeme = document.getElementById('memeContainer') //A DONDE LO QUIERO PASAR
-console.log(containerMeme)
+const containerMeme = document.getElementById('memeBox') //A DONDE LO QUIERO PASAR
 
 userUrlMeme.addEventListener('input', (e)=> changesImgMemeContainer(e))
  
@@ -95,18 +95,70 @@ const changesImgMemeContainer = (e)=> {
     containerMeme.style.backgroundPosition = 'center'
 }
 
+// ---------------------------------------------DESCARGAR MEME---------------------------------------------------------------------------
+
+const downloadButton = document.getElementById("downloadPicButton")
+const meme = document.getElementById("memeContainer");
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+const downloadMeme = () => {
+    domtoimage.toBlob(meme).then(function(blob){
+      window.saveAs(blob, "meme.png");
+    });
+  };
+
+//   SE DESCARGA PERO MAL, PORQUE?
 
 
+// -------------------------------------CAMBIAR FONDO DE COLOR MEME---------------------------------------------------------------------------
+const inputBackgroundMeme = document.getElementById('backgroundColorMeme') //LO QUE QUIERO TOMAR
+const showColorPicked = document.getElementById('backgroundColorNumber')
+
+inputBackgroundMeme.addEventListener('input', (event)=> backgroundColorChangeMeme(event))
+
+const backgroundColorChangeMeme = (e)=> {
+    // backgroundColorMeme.style.backgroundColor = `${e.target.value}`
+    let color = e.target.value
+    containerMeme.style.backgroundColor = color
+    showColorPicked.innerHTML = `${color}`
+}
+// PORQUE SE ME PONE EN AZUL EL SPAN?
 
 
+// ------------------------------------------------FILTROS---------------------------------------------------------------------------
 
+const brightFilter = document.getElementById('brigthInput')
+const opacityFilter = document.getElementById('opacityInput')
+const contrastFilter = document.getElementById('contrastInput')
+const blurFilter = document.getElementById('blurInput')
+const sepiaFilter = document.getElementById('sepiaInput')
+const hueFilter = document.getElementById('hueInput')
+const saturationFilter = document.getElementById('saturationInput')
+const grayScaleFilter = document.getElementById('grayScaleInput')
 
+brightFilter.addEventListener('input', (event)=> filters(event))
+console.log(brightFilter)
+opacityFilter.addEventListener('input', (event)=> filters(event))
+console.log(opacityFilter)
+contrastFilter.addEventListener('input', (event)=> filters(event))
+console.log(contrastFilter)
+blurFilter.addEventListener('input', (event)=> filters(event))
+console.log(blurFilter)
+sepiaFilter.addEventListener('input', (event)=> filters(event))
+console.log(sepiaFilter)
+hueFilter.addEventListener('input', (event)=> filters(event))
+console.log(hueFilter)
+saturationFilter.addEventListener('input', (event)=> filters(event))
+console.log(saturationFilter)
+grayScaleFilter.addEventListener('input', (event)=> filters(event))
+console.log(grayScaleFilter)
 
-
-
-
-
-
+const filters = (e) => {
+    console.log(filters)
+    let valueChosen = e.target.value
+    containerMeme.style.filter = `brightness(${valueChosen}) opacity(${valueChosen}) contrast(${valueChosen}%) blur(${valueChosen}px) sepia(${valueChosen}%) hue-rotate(${valueChosen}deg) saturate(${valueChosen}%) grayscale(${valueChosen})`
+}
 
 
 
