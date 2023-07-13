@@ -97,8 +97,8 @@ const changesImgMemeContainer = (e)=> {
 
 // ---------------------------------------------DESCARGAR MEME---------------------------------------------------------------------------
 
-const downloadButton = document.getElementById("downloadPicButton")
-const meme = document.getElementById("memeContainer");
+const downloadButton = document.getElementById("downloadPicButton") //LO QUE QUIERO TOMAR
+const meme = document.getElementById("memeContainer")     //LO QUE QUIERO CAMBIAR
 
 downloadButton.addEventListener("click", () => downloadMeme());
 
@@ -111,14 +111,13 @@ const downloadMeme = () => {
 //   SE DESCARGA PERO MAL, PORQUE?
 
 
-// -------------------------------------CAMBIAR FONDO DE COLOR MEME---------------------------------------------------------------------------
+// -------------------------------------------------CAMBIAR FONDO DE COLOR MEME-----------------------------------------------------------------------------------------------------------
 const inputBackgroundMeme = document.getElementById('backgroundColorMeme') //LO QUE QUIERO TOMAR
-const showColorPicked = document.getElementById('backgroundColorNumber')
+const showColorPicked = document.getElementById('backgroundColorNumber') //LO QUE QUIERO CAMBIAR
 
 inputBackgroundMeme.addEventListener('input', (event)=> backgroundColorChangeMeme(event))
 
 const backgroundColorChangeMeme = (e)=> {
-    // backgroundColorMeme.style.backgroundColor = `${e.target.value}`
     let color = e.target.value
     containerMeme.style.backgroundColor = color
     showColorPicked.innerHTML = `${color}`
@@ -126,7 +125,19 @@ const backgroundColorChangeMeme = (e)=> {
 // PORQUE SE ME PONE EN AZUL EL SPAN?
 
 
-// ------------------------------------------------FILTROS---------------------------------------------------------------------------
+// -------------------------------------------------FILTRO AL FONDO DE COLOR MEME-----------------------------------------------------------------------------------------------------------
+
+const selectionEffect = document.getElementById('selectColorBackgroundEfect')
+
+
+selectionEffect.addEventListener('change', ()=> applyEffect())
+
+const applyEffect = ()=> {
+    console.log(selectionEffect.value)
+    containerMeme.style.backgroundBlendMode = `${selectionEffect.value}`
+}
+
+// -----------------------------------------------------------FILTROS---------------------------------------------------------------------------
 
 const brightFilter = document.getElementById('brigthInput')
 const opacityFilter = document.getElementById('opacityInput')
@@ -137,28 +148,72 @@ const hueFilter = document.getElementById('hueInput')
 const saturationFilter = document.getElementById('saturationInput')
 const grayScaleFilter = document.getElementById('grayScaleInput')
 
-brightFilter.addEventListener('input', (event)=> filters(event))
-console.log(brightFilter)
-opacityFilter.addEventListener('input', (event)=> filters(event))
-console.log(opacityFilter)
-contrastFilter.addEventListener('input', (event)=> filters(event))
-console.log(contrastFilter)
-blurFilter.addEventListener('input', (event)=> filters(event))
-console.log(blurFilter)
-sepiaFilter.addEventListener('input', (event)=> filters(event))
-console.log(sepiaFilter)
-hueFilter.addEventListener('input', (event)=> filters(event))
-console.log(hueFilter)
-saturationFilter.addEventListener('input', (event)=> filters(event))
-console.log(saturationFilter)
-grayScaleFilter.addEventListener('input', (event)=> filters(event))
-console.log(grayScaleFilter)
+brightFilter.addEventListener('input', ()=> filters())
+opacityFilter.addEventListener('input', ()=> filters())
+contrastFilter.addEventListener('input', ()=> filters())
+blurFilter.addEventListener('input', ()=> filters())
+sepiaFilter.addEventListener('input', ()=> filters())
+hueFilter.addEventListener('input', ()=> filters())
+saturationFilter.addEventListener('input', ()=> filters())
+grayScaleFilter.addEventListener('input', ()=> filters())
 
-const filters = (e) => {
-    console.log(filters)
-    let valueChosen = e.target.value
-    containerMeme.style.filter = `brightness(${valueChosen}) opacity(${valueChosen}) contrast(${valueChosen}%) blur(${valueChosen}px) sepia(${valueChosen}%) hue-rotate(${valueChosen}deg) saturate(${valueChosen}%) grayscale(${valueChosen})`
+const filters = () => {
+    containerMeme.style.filter = `brightness(${brightFilter.value}) opacity(${opacityFilter.value}) contrast(${contrastFilter.value}%) blur(${blurFilter.value}px) sepia(${sepiaFilter.value}%) hue-rotate(${hueFilter.value}deg) saturate(${saturationFilter.value}%) grayscale(${grayScaleFilter.value})`
 }
+
+// -----------------------------------------------ESCONDER TEXTO TOP Y TEXTO BOTTOM---------------------------------------------------------------------------
+
+// const firstTopText = document.getElementById('topText')
+// const secondBottomText = document.getElementById('bottomText')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
