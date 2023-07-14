@@ -135,7 +135,6 @@ const selectionEffect = document.getElementById('selectColorBackgroundEfect')
 selectionEffect.addEventListener('change', ()=> applyEffect())
 
 const applyEffect = ()=> {
-    console.log(selectionEffect.value)
     containerMeme.style.backgroundBlendMode = `${selectionEffect.value}`
 }
 
@@ -194,19 +193,55 @@ const hideBottomText = () => {
 
 //PORQUE NO FUNCIONA CON EL TOGGLE? OSEA FUNCIONA PERO NO COMO DEBERIA
 
+// -------------------------------------ESCOJER TIPO DE FUENTE---------------------------------------------------------------------------
 
+const selectFont = document.getElementById('selectTypeFont')  //lo que quiero capturar
 
+selectFont.addEventListener('change', ()=> fontChanges())
 
+const fontChanges = () => {
+    firstTextBox.style.fontFamily = `${selectFont.value}`
+    secondTextBox.style.fontFamily = `${selectFont.value}`
+}
 
+// -------------------------------------TAMANIO DE FUENTE---------------------------------------------------------------------------
 
+const inputTextSize = document.getElementById('inputSizeNumber') //LO QUE QUIERO CAPTURAR
 
+inputTextSize.addEventListener('input', ()=> changeFontSize())
 
+const changeFontSize = ()=> {
+    firstTextBox.style.fontSize = `${inputTextSize.value}px`
+    secondTextBox.style.fontSize = `${inputTextSize.value}px`
+}
 
+// -------------------------------------CENTRADO DE FUENTE---------------------------------------------------------------------------
 
+const btnLeftText = document.getElementById('buttonAlignLeft')
+const btnCenterText = document.getElementById('buttonAlignCenter')
+const btnRigth = document.getElementById('buttonAlignRigth') //LO QUE QUIERO CAPTURAR
 
+btnLeftText.addEventListener('click', ()=> alignLeftText())
 
+const alignLeftText = ()=> {
+    firstTextBox.style.textAlign = 'left'
+    secondTextBox.style.textAlign = 'left'
+}
 
+btnCenterText.addEventListener('click', ()=> alignCenterText())
 
+const alignCenterText = () => {
+    firstTextBox.style.textAlign = 'center'
+    secondTextBox.style.textAlign = 'center'
+}
+
+btnRigth.addEventListener('click', ()=> alignRigthText())
+
+const alignRigthText = () => {
+    firstTextBox.style.textAlign = 'right'
+    secondTextBox.style.textAlign = 'right'
+
+}
 
 
 

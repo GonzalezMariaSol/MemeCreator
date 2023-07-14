@@ -150,6 +150,7 @@ main{
 .divPictureEffect p {
     padding: 2vh;
     padding-left: 0;
+    text-align:center ;
 }
 
 
@@ -162,10 +163,9 @@ main{
 .color:focus, .backgroundColor:focus, .asideImage input:hover, .inputTopText:hover, .inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover, .divColorAndBackgroundColor select:hover{
     background-color: #0e783a;
 }
-.asideImage input:focus{
+.asideImage input:focus, .asideText input:focus, .asideText select:focus{
     outline: none ;
 }
-
 
 
 
