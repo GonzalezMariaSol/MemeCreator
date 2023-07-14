@@ -38,6 +38,7 @@ const ligthMain = document.getElementById('mainContainer')
 const ligthDownloadButton = document.getElementById('downloadPicButton')
 const ligthAsideImg = document.getElementById('asideImg')
 const ligthAsideText = document.getElementById('asideText')
+const ligthDivBackgroundMeme = document.getElementById('divBackgroundMeme')
 
 ligthModeButton.addEventListener('click',()=>ligthMode())
 
@@ -48,6 +49,7 @@ const ligthMode = ()=>{
     ligthDownloadButton.classList.toggle('ligthDownloadPictureButton')
     ligthAsideImg.classList.toggle('ligthModeAsideImg')
     ligthAsideText.classList.toggle('ligthModeAsideText')
+    ligthDivBackgroundMeme.classList.toggle('ligthBackgroundMeme')
     if (ligthHeader.classList.contains("ligthModeHeader")){
         ligthModeButton.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
     }else{
@@ -161,21 +163,36 @@ const filters = () => {
     containerMeme.style.filter = `brightness(${brightFilter.value}) opacity(${opacityFilter.value}) contrast(${contrastFilter.value}%) blur(${blurFilter.value}px) sepia(${sepiaFilter.value}%) hue-rotate(${hueFilter.value}deg) saturate(${saturationFilter.value}%) grayscale(${grayScaleFilter.value})`
 }
 
+
 // -----------------------------------------------ESCONDER TEXTO TOP Y TEXTO BOTTOM---------------------------------------------------------------------------
 
-// const firstTopText = document.getElementById('topText')
-// const secondBottomText = document.getElementById('bottomText')
+//--------------TOP TEXT----
+const inputCheckText = document.getElementById('checkWithoutTopText')
 
+inputCheckText.addEventListener('change', () => hideTopText())
 
+const hideTopText = () => {
+  if (inputCheckText.checked) {
+    firstTextBox.classList.add('hide')
+  } else {
+    firstTextBox.classList.remove('hide')
+  }
+}
 
+//--------------BOTTOM TEXT----
+const inputCheckBottomText = document.getElementById('checkWithoutBottomText')
 
+inputCheckBottomText.addEventListener('change', () => hideBottomText())
 
+const hideBottomText = () => {
+  if (inputCheckBottomText.checked) {
+    secondTextBox.classList.add('hide')
+  } else {
+    secondTextBox.classList.remove('hide')
+  }
+}
 
-
-
-
-
-
+//PORQUE NO FUNCIONA CON EL TOGGLE? OSEA FUNCIONA PERO NO COMO DEBERIA
 
 
 

@@ -51,7 +51,6 @@ main{
 .memeContainer{
     height:70vh;
     width: 50%;
-    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
 }
@@ -72,7 +71,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /*se supone que esto agranda la foto para cuando se oculte el texto de arriba u abajo */
+    flex-grow: 1;
 }
 .bottom{
     padding: 10px 0px;
@@ -82,13 +81,11 @@ main{
 .downloadPictureButton{
     background-color: #00ff66;
     color: white;
-    /* margin-bottom: 2vh;
-    margin-left: 46%;
-    margin-top: 2.5vh; */
-    width: 20%;
+    width: 15%;
     border-radius: 5px;
     border-style: none;
     padding: 1vh;
+    margin-top: 2vh;
     font-weight: bold;
 }
 
@@ -140,7 +137,6 @@ main{
     width: 42%;
 }
 .backgroundMeme span{
-    background-color: blue;
     width: fit-content;
 }
 .divColorAndBackgroundColor select{
@@ -296,6 +292,9 @@ main{
     background-color: #ebe00d;
     color: rgb(52, 52, 52);
 }
+.ligthBackgroundMeme{
+    background-color: #fff200;
+}
 .ligthModeAsideImg button, .ligthModeAsideImg select, .ligthModeAsideText button, .ligthModeAsideImg input, .ligthModeAsideText input, .ligthModeAsideText span, .ligthModeAsideText select{
     background-color: #fff200;
     color: rgb(52, 52, 52);
@@ -303,7 +302,6 @@ main{
 .ligthModeAsideImg button:hover, .ligthModeAsideImg select:hover, .ligthModeAsideText button:hover, .ligthModeAsideImg input:hover, .ligthModeAsideText input:hover, .ligthModeAsideText span:hover, .ligthModeAsideText select:hover{
     background-color: #fff98f;
 }
-
 
 
 

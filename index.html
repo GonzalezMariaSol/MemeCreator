@@ -29,7 +29,7 @@
                 <button id="ligthDarkMode"><i class="fa-regular fa-sun" style="color: #ffffff;"></i> Ligth Mode</button>
             </div>
         </header>
-        <main>
+        <main id="mainContainer">
             <div class="memeContainer" id="memeContainer">
                 <div class="text top" id="topText">top</div>
                 <div class="memeBox" id="memeBox"></div>
@@ -46,15 +46,16 @@
             <div class="divBackground">
                 <p>BACKGROUND</p>
                 <div class="divColorAndBackgroundColor">
-                    <div class="backgroundMeme">
-                    <input type="color" id="backgroundColorMeme"><span id="backgroundColorNumber"></span></div>
+                    <div class="backgroundMeme" id="divBackgroundMeme">
+                        <input type="color" id="backgroundColorMeme"><span id="backgroundColorNumber"></span>
+                    </div>
                     <select class="selectColorBackgroundEfect" id="selectColorBackgroundEfect">
                         <option selected value="unset">None</option>
-                        <option  value="lighten">clear</option>
-                        <option  value="darken">darken</option>
-                        <option  value="difference">difference</option>
-                        <option  value="luminosity">brightness</option>
-                        <option  value="multiply">multiply</option>
+                        <option value="lighten">clear</option>
+                        <option value="darken">darken</option>
+                        <option value="difference">difference</option>
+                        <option value="luminosity">brightness</option>
+                        <option value="multiply">multiply</option>
                     </select>
                 </div>
             </div>
