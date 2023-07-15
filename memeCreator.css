@@ -160,7 +160,7 @@ main{
 
 
 /* HOVER Y FOCUS PART */
-.color:focus, .backgroundColor:focus, .asideImage input:hover, .inputTopText:hover, .inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxMargin input:hover, .divTextBoxLeading input:hover, .divColorAndBackgroundColor select:hover{
+.color:focus, .backgroundColor:focus, .asideImage input:hover, .inputTopText:hover, .inputBottomText:hover, .divFontFamilySelect select:hover, .divButtonTextAlignAndSize input:hover, .divButtonTextAlignAndSize button:hover, .outlineOptions button:hover, .divTextBoxPadding input:hover, .divTextBoxLeading select:hover, .divColorAndBackgroundColor select:hover{
     background-color: #0e783a;
 }
 .asideImage input:focus, .asideText input:focus, .asideText select:focus{
@@ -239,7 +239,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
 }
-.divTextBoxMargin input, .divTextBoxLeading input{
+.divTextBoxPadding input, .divTextBoxLeading select{
     width: 100%;
     background-color: #0b622f;
     color: white;
@@ -304,6 +304,11 @@ main{
 }
 
 
+
+/* FONDO TRANSPARENTE PARA TEXTO DE MEME */
+.clearBackgroundTopTex, .clearBackgroundBottomText{
+    background-color: transparent;
+}
 
 
 

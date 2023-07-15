@@ -119,34 +119,42 @@
                 <div class="divColorText">
                     <p>COLOR</p>
                     <div class="color">
-                        <input type="color"><span>o</span>
+                        <input type="color" id="inputFontColor"><span id="spanFontColorNumber">o</span>
                     </div>
                 </div>
                 <div class="divBackgroundColor">
                     <p>BACKGROUND</p>
                     <div class="backgroundColor">
-                        <input type="color"><span>o</span>
+                        <input type="color" id="inputFontBackgroundColor"><span id="spanFontBackgroundColor">o</span>
                     </div>
                 </div>
             </div>
             <div class="checkWithClearBackground">
-                <input type="checkbox">clear background
+                <input type="checkbox" id="checkboxClearBackgroundText">clear background
             </div>
             <div class="divOutlineText">
                 <p>OUTLINE</p>
                 <div class="outlineOptions">
-                    <button>None</button>
-                    <button>Ligth</button>
-                    <button>Dark</button>
+                    <button id="buttonOptionNoneOutline">None</button>
+                    <button id="buttonOptionLigthOutline">Ligth</button>
+                    <button id="buttonOptionDarkOutline">Dark</button>
                 </div>
             </div>
-            <div class="divTextBoxMargin">
-                <p>MARGIN</p>
-                <input type="number">
+            <div class="divTextBoxPadding">
+                <p>PADDING</p>
+                <input type="number" value="9" id="inputTextPadding">
             </div>
             <div class="divTextBoxLeading">
                 <p>LEADING</p>
-                <input type="number">
+                <!-- <input type="number" value="1.2" id="inputTextLeading"> -->
+                <select id="selectTextLeading">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
             </div>
         </aside>
     </div>

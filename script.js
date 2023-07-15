@@ -138,7 +138,7 @@ const applyEffect = ()=> {
     containerMeme.style.backgroundBlendMode = `${selectionEffect.value}`
 }
 
-// -----------------------------------------------------------FILTROS---------------------------------------------------------------------------
+// ------------------------------------------------FILTROS---------------------------------------------------------------------------
 
 const brightFilter = document.getElementById('brigthInput')
 const opacityFilter = document.getElementById('opacityInput')
@@ -163,7 +163,7 @@ const filters = () => {
 }
 
 
-// -----------------------------------------------ESCONDER TEXTO TOP Y TEXTO BOTTOM---------------------------------------------------------------------------
+// -------------------------------------ESCONDER TEXTO TOP Y TEXTO BOTTOM---------------------------------------------------------------------------
 
 //--------------TOP TEXT----
 const inputCheckText = document.getElementById('checkWithoutTopText')
@@ -243,16 +243,96 @@ const alignRigthText = () => {
 
 }
 
+// -------------------------------------COLOR DE FUENTE---------------------------------------------------------------------------
+
+const inputFontColor = document.getElementById('inputFontColor')  //LO QUE QUIERO CAPTURAR
+const colorChosenNumber = document.getElementById('spanFontColorNumber')
+
+inputFontColor.addEventListener('input', (e)=> changeFontColor(e))
+
+const changeFontColor = () => {
+    firstTextBox.style.color = `${inputFontColor.value}`
+    secondTextBox.style.color = `${inputFontColor.value}`
+    colorChosenNumber.innerHTML = `${inputFontColor.value}`
+}
+
+// -------------------------------------COLOR DE FONDO DE LA FUENTE---------------------------------------------------------------------------
+
+const inputBackgroundColor = document.getElementById('inputFontBackgroundColor') //a quien quiero atrapar
+const backgroundColorChoosen = document.getElementById('spanFontBackgroundColor') //a quien quiero modificar
 
 
+inputBackgroundColor.addEventListener('input', (e)=> changeFontBackgroundColor(e))
+
+const changeFontBackgroundColor = () => {
+    firstTextBox.style.backgroundColor = `${inputBackgroundColor.value}`
+    secondTextBox.style.backgroundColor = `${inputBackgroundColor.value}`
+    backgroundColorChoosen.innerHTML = `${inputBackgroundColor.value}`
+}
 
 
+// -------------------------------------FONDO TRANSPARENTE DE LA FUENTE---------------------------------------------------------------------------
 
+const inputCheckBoxClearBackground = document.getElementById('checkboxClearBackgroundText') //lo que quiero capturar
 
+inputCheckBoxClearBackground.addEventListener('change', ()=> clearBackgroundChange())
 
+const clearBackgroundChange = () => {
+    if (inputCheckBoxClearBackground.checked) {
+        firstTextBox.classList.add('clearBackgroundTopTex')
+        secondTextBox.classList.add('clearBackgroundBottomText')
+    }else{
+        firstTextBox.classList.remove('clearBackgroundTopTex')
+        secondTextBox.classList.remove('clearBackgroundBottomText')
+    }
+}
 
+// -------------------------------------BOTONES PARA BORDES DE TEXTO---------------------------------------------------------------------------
+const noneOutlineBtn = document.getElementById('buttonOptionNoneOutline')
+const ligthOutlineBtn = document.getElementById('buttonOptionLigthOutline')
+const darkOutlineBtn = document.getElementById('buttonOptionDarkOutline') //LO QUE QUIERO CAPTURAR
 
+noneOutlineBtn.addEventListener('click', ()=> withoutOutline())
+const withoutOutline = () => {
+    console.log(noneOutlineBtn)
+    firstTextBox.style.webkitTextStroke = 'transparent'
+    secondTextBox.style.webkitTextStroke = 'transparent'
+}
 
+ligthOutlineBtn.addEventListener('click', ()=> whiteOutline())
+const whiteOutline = () => {
+    firstTextBox.style.webkitTextStroke = '1px white'
+    secondTextBox.style.webkitTextStroke = '1px white'
+}
+
+darkOutlineBtn.addEventListener('click', ()=> blackOutline())
+const blackOutline = () => {
+    firstTextBox.style.webkitTextStroke = '1px black'
+    secondTextBox.style.webkitTextStroke = '1px black'
+}
+
+// -------------------------------------MARGEN DE TEXTO---------------------------------------------------------------------------
+
+const inputPadding = document.getElementById('inputTextPadding') //LO QUE QUIERO CAPUTRAR
+
+inputPadding.addEventListener('input', (e)=> changePadding(e))
+
+const changePadding = () => {
+    firstTextBox.style.padding = `${inputPadding.value}px`
+    secondTextBox.style.padding = `${inputPadding.value}px`
+}
+
+// -------------------------------------MARGEN DE TEXTO---------------------------------------------------------------------------
+
+const textLeading = document.getElementById('selectTextLeading') //lo que quiero capturar
+
+textLeading.addEventListener('change', ()=> changeTextLeading())
+
+const changeTextLeading = () => {
+    console.log(textLeading.value)
+    firstTextBox.style.lineHeight = `${textLeading.value}%`
+    secondTextBox.style.lineHeight = `${textLeading.value}%`
+}
 
 
 
