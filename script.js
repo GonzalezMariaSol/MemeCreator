@@ -1,4 +1,5 @@
 // ---------------------------------------------------------BOTONES ASIDE---------------------------------------------------------------------------
+
 const buttonImage = document.getElementById('imageButton')
 const buttonText = document.getElementById('textButton')
 const asideImage = document.getElementById('asideImg')
@@ -11,7 +12,6 @@ const hideAsideImg = ()=> {
     asideImage.classList.remove('hide')
 }
 
-
 buttonText.addEventListener('click', ()=>hideAsideText())
 
 const hideAsideText = ()=> {
@@ -19,16 +19,10 @@ const hideAsideText = ()=> {
     asideImage.classList.add('hide')
 }
 
-
 // funciona pero NO TIENE SENTIDO EL ORDEN DE LAS ORDENES DENTRO DE LA FUNCION
 //NO SE PORQUE SE MUESTRA PRIMERO EL ASIDE TEXTO SI EL ASIDE IMG ES EL QUE ESTA DECLARADO EN TODAS PARTES PRIMERO
 
-
-
-
-
 // -----------------------------------------------------MODO CLARO/OSCURO---------------------------------------------------------------------------
-
 
 const ligthModeButton = document.getElementById('ligthDarkMode')
 
@@ -57,14 +51,13 @@ const ligthMode = ()=>{
     }
 }
 
-
 // ---------------------------------------------TOMAR TEXTOS DEL MEME---------------------------------------------------------------------------
 
 const firstTextBox = document.getElementById('topText')
-const secondTextBox = document.getElementById('bottomText')     // YO QUIERO PASAR A...
+const secondTextBox = document.getElementById('bottomText')
 
 const inputTopText = document.getElementById('inputTopText')
-const inputBottomText = document.getElementById('inputBottomText') // QUIERO ATRAPAR
+const inputBottomText = document.getElementById('inputBottomText')
 
 
 
@@ -82,11 +75,10 @@ const changeBottomText = (e)=> {
     secondTextBox.innerHTML = `${valueBottomText}`
 }
 
-
 // ---------------------------------------------TOMAR IMG DEL MEME---------------------------------------------------------------------------
 
-const userUrlMeme = document.getElementById('memeUrl') //LO QUE QUIERO TOMAR
-const containerMeme = document.getElementById('memeBox') //A DONDE LO QUIERO PASAR
+const userUrlMeme = document.getElementById('memeUrl')
+const containerMeme = document.getElementById('memeBox')
 
 userUrlMeme.addEventListener('input', (e)=> changesImgMemeContainer(e))
  
@@ -99,8 +91,8 @@ const changesImgMemeContainer = (e)=> {
 
 // ---------------------------------------------DESCARGAR MEME---------------------------------------------------------------------------
 
-const downloadButton = document.getElementById("downloadPicButton") //LO QUE QUIERO TOMAR
-const meme = document.getElementById("memeContainer")     //LO QUE QUIERO CAMBIAR
+const downloadButton = document.getElementById("downloadPicButton")
+const meme = document.getElementById("memeContainer")
 
 downloadButton.addEventListener("click", () => downloadMeme());
 
@@ -110,12 +102,10 @@ const downloadMeme = () => {
     });
   };
 
-//   SE DESCARGA PERO MAL, PORQUE?
-
-
 // -------------------------------------------------CAMBIAR FONDO DE COLOR MEME-----------------------------------------------------------------------------------------------------------
-const inputBackgroundMeme = document.getElementById('backgroundColorMeme') //LO QUE QUIERO TOMAR
-const showColorPicked = document.getElementById('backgroundColorNumber') //LO QUE QUIERO CAMBIAR
+
+const inputBackgroundMeme = document.getElementById('backgroundColorMeme') 
+const showColorPicked = document.getElementById('backgroundColorNumber') 
 
 inputBackgroundMeme.addEventListener('input', (event)=> backgroundColorChangeMeme(event))
 
@@ -124,18 +114,25 @@ const backgroundColorChangeMeme = (e)=> {
     containerMeme.style.backgroundColor = color
     showColorPicked.innerHTML = `${color}`
 }
-// PORQUE SE ME PONE EN AZUL EL SPAN?
-
 
 // -------------------------------------------------FILTRO AL FONDO DE COLOR MEME-----------------------------------------------------------------------------------------------------------
 
 const selectionEffect = document.getElementById('selectColorBackgroundEfect')
 
-
 selectionEffect.addEventListener('change', ()=> applyEffect())
 
 const applyEffect = ()=> {
     containerMeme.style.backgroundBlendMode = `${selectionEffect.value}`
+}
+
+// ------------------------------------------------BOTON RESET---------------------------------------------------------------------------
+
+const btnResetImgChanges = document.getElementById('resetButtonImg')
+
+btnResetImgChanges.addEventListener('click', ()=> backToDefaultValuesPicture())
+
+const backToDefaultValuesPicture = () => {
+    containerMeme.style.filter = `brightness(${brightFilter.value = '1'}) opacity(${opacityFilter.value = '1'}) contrast(${contrastFilter.value = '100'}%) blur(${blurFilter.value = '0'}px) sepia(${sepiaFilter.value = '0'}%) hue-rotate(${hueFilter.value = '0'}deg) saturate(${saturationFilter.value = '100'}%) grayscale(${grayScaleFilter.value = '1'})`
 }
 
 // ------------------------------------------------FILTROS---------------------------------------------------------------------------
@@ -161,7 +158,6 @@ grayScaleFilter.addEventListener('input', ()=> filters())
 const filters = () => {
     containerMeme.style.filter = `brightness(${brightFilter.value}) opacity(${opacityFilter.value}) contrast(${contrastFilter.value}%) blur(${blurFilter.value}px) sepia(${sepiaFilter.value}%) hue-rotate(${hueFilter.value}deg) saturate(${saturationFilter.value}%) grayscale(${grayScaleFilter.value})`
 }
-
 
 // -------------------------------------ESCONDER TEXTO TOP Y TEXTO BOTTOM---------------------------------------------------------------------------
 
@@ -195,7 +191,7 @@ const hideBottomText = () => {
 
 // -------------------------------------ESCOJER TIPO DE FUENTE---------------------------------------------------------------------------
 
-const selectFont = document.getElementById('selectTypeFont')  //lo que quiero capturar
+const selectFont = document.getElementById('selectTypeFont')
 
 selectFont.addEventListener('change', ()=> fontChanges())
 
@@ -206,7 +202,7 @@ const fontChanges = () => {
 
 // -------------------------------------TAMANIO DE FUENTE---------------------------------------------------------------------------
 
-const inputTextSize = document.getElementById('inputSizeNumber') //LO QUE QUIERO CAPTURAR
+const inputTextSize = document.getElementById('inputSizeNumber')
 
 inputTextSize.addEventListener('input', ()=> changeFontSize())
 
@@ -219,7 +215,7 @@ const changeFontSize = ()=> {
 
 const btnLeftText = document.getElementById('buttonAlignLeft')
 const btnCenterText = document.getElementById('buttonAlignCenter')
-const btnRigth = document.getElementById('buttonAlignRigth') //LO QUE QUIERO CAPTURAR
+const btnRigth = document.getElementById('buttonAlignRigth')
 
 btnLeftText.addEventListener('click', ()=> alignLeftText())
 
@@ -245,7 +241,7 @@ const alignRigthText = () => {
 
 // -------------------------------------COLOR DE FUENTE---------------------------------------------------------------------------
 
-const inputFontColor = document.getElementById('inputFontColor')  //LO QUE QUIERO CAPTURAR
+const inputFontColor = document.getElementById('inputFontColor')
 const colorChosenNumber = document.getElementById('spanFontColorNumber')
 
 inputFontColor.addEventListener('input', (e)=> changeFontColor(e))
@@ -258,8 +254,8 @@ const changeFontColor = () => {
 
 // -------------------------------------COLOR DE FONDO DE LA FUENTE---------------------------------------------------------------------------
 
-const inputBackgroundColor = document.getElementById('inputFontBackgroundColor') //a quien quiero atrapar
-const backgroundColorChoosen = document.getElementById('spanFontBackgroundColor') //a quien quiero modificar
+const inputBackgroundColor = document.getElementById('inputFontBackgroundColor')
+const backgroundColorChoosen = document.getElementById('spanFontBackgroundColor')
 
 
 inputBackgroundColor.addEventListener('input', (e)=> changeFontBackgroundColor(e))
@@ -270,10 +266,9 @@ const changeFontBackgroundColor = () => {
     backgroundColorChoosen.innerHTML = `${inputBackgroundColor.value}`
 }
 
-
 // -------------------------------------FONDO TRANSPARENTE DE LA FUENTE---------------------------------------------------------------------------
 
-const inputCheckBoxClearBackground = document.getElementById('checkboxClearBackgroundText') //lo que quiero capturar
+const inputCheckBoxClearBackground = document.getElementById('checkboxClearBackgroundText')
 
 inputCheckBoxClearBackground.addEventListener('change', ()=> clearBackgroundChange())
 
@@ -281,6 +276,7 @@ const clearBackgroundChange = () => {
     if (inputCheckBoxClearBackground.checked) {
         firstTextBox.classList.add('clearBackgroundTopTex')
         secondTextBox.classList.add('clearBackgroundBottomText')
+        // containerMeme.style.flexGrow = '1'  //porque no funciona? :(
     }else{
         firstTextBox.classList.remove('clearBackgroundTopTex')
         secondTextBox.classList.remove('clearBackgroundBottomText')
@@ -288,9 +284,10 @@ const clearBackgroundChange = () => {
 }
 
 // -------------------------------------BOTONES PARA BORDES DE TEXTO---------------------------------------------------------------------------
+
 const noneOutlineBtn = document.getElementById('buttonOptionNoneOutline')
 const ligthOutlineBtn = document.getElementById('buttonOptionLigthOutline')
-const darkOutlineBtn = document.getElementById('buttonOptionDarkOutline') //LO QUE QUIERO CAPTURAR
+const darkOutlineBtn = document.getElementById('buttonOptionDarkOutline')
 
 noneOutlineBtn.addEventListener('click', ()=> withoutOutline())
 const withoutOutline = () => {
@@ -313,7 +310,7 @@ const blackOutline = () => {
 
 // -------------------------------------MARGEN DE TEXTO---------------------------------------------------------------------------
 
-const inputPadding = document.getElementById('inputTextPadding') //LO QUE QUIERO CAPUTRAR
+const inputPadding = document.getElementById('inputTextPadding')
 
 inputPadding.addEventListener('input', (e)=> changePadding(e))
 
@@ -324,7 +321,7 @@ const changePadding = () => {
 
 // -------------------------------------MARGEN DE TEXTO---------------------------------------------------------------------------
 
-const textLeading = document.getElementById('selectTextLeading') //lo que quiero capturar
+const textLeading = document.getElementById('selectTextLeading')
 
 textLeading.addEventListener('change', ()=> changeTextLeading())
 
@@ -333,28 +330,3 @@ const changeTextLeading = () => {
     firstTextBox.style.lineHeight = `${textLeading.value}%`
     secondTextBox.style.lineHeight = `${textLeading.value}%`
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

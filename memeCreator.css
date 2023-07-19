@@ -9,14 +9,13 @@ body{
 .structureContainter{
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
 }
 
 /* HEADER-TITLE-AND IMG-TEXT AND DARK MODE BUTTONS */
 header{
     background-color: #003817;
     width: 100%;
-    height: 20vh;
+    min-height: 20vh;
     text-align: center;
 }
 h1{
@@ -266,7 +265,6 @@ main{
 
 
 /* MODO CLARO */
-
 .ligthModeHeader{
     background-color: #efe44a;
     color: rgb(52, 52, 52);
@@ -285,8 +283,7 @@ main{
 }
 .ligthDownloadPictureButton{
     background-color: rgb(0, 255, 119);
-    color: rgb(52, 52, 52);
-    
+    color: rgb(52, 52, 52);  
 }
 .ligthModeAsideImg, .ligthModeAsideText {
     background-color: #ebe00d;
@@ -309,7 +306,6 @@ main{
 .clearBackgroundTopTex, .clearBackgroundBottomText{
     background-color: transparent;
 }
-
 
 
 
